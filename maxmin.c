@@ -54,10 +54,9 @@ int main()
 	int size = input(arr, MAX);
 	//first approach
 	//cont = find_max_min(arr, size);
-	//better approach (Tournament method)
+	//(Tournament method)
 	cont = find_max_min(arr, 0, size - 1);
 	printf("Max: %d Min: %d\n", cont.max, cont.min);
 	return 0;	
 
 }
-

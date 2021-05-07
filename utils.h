@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 
 /*PRINT FUNCTION
@@ -10,6 +11,7 @@ which it is to be printed
 void print(int* arr, int size)
 {
 	int i;
+	printf("\n");
 	for(i = 0;i < size;i++) 
 		printf("%d ", arr[i]);
 	printf("\n");
@@ -58,3 +60,14 @@ int min(int x, int y)
 {
 	return x < y ? x : y;
 }
+
+int indexOfMax(int* arr, int i, int j)
+{
+	return arr[i] > arr[j] ? i : j;
+}
+
+int indexOfMin(int* arr, int i, int j)
+{
+	return arr[i] < arr[j] ? i : j;
+}
+
