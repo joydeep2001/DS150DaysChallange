@@ -1,6 +1,6 @@
 *
 !*.c
-!.cpp
+!*.cpp
 !*.h
 !.gitignore
-
+!cpp_solution/
