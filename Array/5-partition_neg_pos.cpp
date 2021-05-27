@@ -12,11 +12,8 @@ void rearrange(int* arr, int n)
 		//if arr[j] is positive
 		//considering that 0 is also positive
 		if(arr[j] >= 0){
-			//checking arr[i] < 0 or not coz 
-			//if already arr[i] is >= 0 (positive) then
-			//the arr[j] we encountered is not
-			//the left most positive value
-			if(i == -1 || arr[i] < 0)
+			
+			if(i == -1)
 				i = j;
 		}
 		//for negetive
@@ -24,9 +21,6 @@ void rearrange(int* arr, int n)
 		{
 			if(i != -1){
 				swap(arr[i], arr[j]);
-				//incrementing i so that it keep
-				//pointing to the left most positive
-				//index
 				i++;
 			}
 		}
@@ -55,7 +49,7 @@ void print(int* arr, int n)
 }
 int main()
 {
-	int arr[] = {-12, -13, 11, -5, 6, -7, 5, -3, -6};
+	int arr[] = {-1, 2, 3, 4, -5};
 	int size = sizeof(arr) / sizeof(int);
 	rearrange(arr, size);
 	cout << "After Rearrange: " << endl;

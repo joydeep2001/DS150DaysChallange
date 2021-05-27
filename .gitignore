@@ -3,4 +3,4 @@
 !*.cpp
 !*.h
 !.gitignore
-!cpp_solution/
+!*/

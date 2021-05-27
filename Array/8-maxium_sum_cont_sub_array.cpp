@@ -1,14 +1,23 @@
 #include <iostream>
-#include<limits>
+#include<algorithm>
+#include<limits.h>
 using namespace std;
+#define MAX 10000
 int maxSum(int* arr, int n)
 {
-	int current = 0;
-	int prevMax = INT_MIN;
+	int maxSoFar = INT_MIN;
+	int maxEndingHere = 0;
 	for(int i = 0;i < n;i++)
 	{
-		if(arr[i] )
+		maxEndingHere += arr[i];
+
+		if(maxSoFar < maxEndingHere)
+			maxSoFar = maxEndingHere;
+		if(maxEndingHere < 0)
+			maxEndingHere = 0;
 	}
+	
+	return maxSoFar;
 }
 
 int main()
