@@ -63,7 +63,6 @@ int lastNonLeafNode(int lastIndex)
 
 
 
-
 void build_heap(int* arr, int kthIndex, bool (*compare)(int, int))
 {
 	for(int parentIndex = lastNonLeafNode(kthIndex); parentIndex >= 0;parentIndex--)
